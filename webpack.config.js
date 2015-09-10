@@ -1,3 +1,5 @@
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
+
 module.exports = {
   context: __dirname + "/test",
   entry: {
@@ -23,10 +25,16 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: "style/url!file"
+        loader: ExtractTextPlugin.extract('style', 'css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]')
       }
     ]
   },
+
+  plugins: [
+    new ExtractTextPlugin('app.css', {
+        allChunks: true
+    })
+  ],
 
   devtool: 'source-map',
 

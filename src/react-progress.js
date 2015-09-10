@@ -1,21 +1,16 @@
 import React, { Component } from 'react';
+import styles from './style.css';
+import cssModules from 'react-css-modules';
 
-export default class Progress extends Component {
+class Progress extends Component {
   constructor(props) {
     super(props);
   }
 
   render() {
     let progressStyle = {
-      display: 'inline-block',
-      position: 'fixed',
-      top: 0,
-      left: 0,
       width: `${this.props.percent}%`,
-      maxWidth: '100% !important',
       height: `${this.props.height}px`,
-      boxShadow: '1px 1px 1px rgba(0,0,0,0.4)',
-      borderRadius: '0 1px 1px 0',
       WebkitTransition: `${this.props.speed}s width, ${this.props.speed}s background-color`,
       transition: `${this.props.speed}s width, ${this.props.speed}s background-color`
     };
@@ -28,9 +23,11 @@ export default class Progress extends Component {
       progressStyle.backgroundSize = `100vw ${this.props.height}px`;
     }
 
-    return <div className='progress' style={progressStyle}></div>;
+    return <div styleName='progress' style={progressStyle}></div>;
   }
 }
+
+export default cssModules(Progress, styles);
 
 Progress.defaultProps = {
   height: 2,
