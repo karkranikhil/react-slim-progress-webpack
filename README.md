@@ -1,15 +1,17 @@
-# react-slim-progress
+# react-slim-progress-webpack
 
-React Slim Progress like Youtube and Medium
+This is a sample of creating React Shippable Component with external CSS files by using `react-css-modules`.
+In order to use this module, proper webpack configuration is need.
+Instead of managing inline css, use `react-css-modules` to build an external css file
 
 Useage:
 
 ```
-npm install react-slim-progress
+npm install react-slim-progress-webpack
 ```
 
 ```es6
-import Progress from 'react-slim-progress';
+import Progress from 'react-slim-progress-webpack';
 
 export default class App extends Component {
   render() {
@@ -19,5 +21,3 @@ export default class App extends Component {
   }
 }
 ```
-
-See example: http://ruanyl.github.io/react-slim-progress

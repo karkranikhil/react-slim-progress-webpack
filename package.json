@@ -1,5 +1,5 @@
 {
-  "name": "react-slim-progress",
+  "name": "react-slim-progress-webpack",
   "version": "0.5.1",
   "description": "Youtube style slim progress bar for React",
   "main": "./lib/react-progress.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ruanyl/react-slim-progress"
+    "url": "https://github.com/ruanyl/react-slim-progress-webpack"
   },
   "keywords": [
     "progress",
