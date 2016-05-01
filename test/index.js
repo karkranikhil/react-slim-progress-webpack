@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import App from './app';
 
-React.render(
+ReactDOM.render(
   <App />,
   document.body
 );

@@ -1,15 +1,14 @@
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
-  context: __dirname + "/test",
   entry: {
-    javascript: "./index.js",
-    html: "./index.html"
+    javascript: "./test/index.js",
+    html: "./test/index.html"
   },
 
   output: {
     filename: "app.js",
-    path: __dirname + "/app"
+    path: "app"
   },
 
   module: {
@@ -17,7 +16,7 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loaders: ["babel-loader?optional[]=runtime&stage=0"]
+        loader: "babel-loader"
       },
       {
         test: /\.html$/,

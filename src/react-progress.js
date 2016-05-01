@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import styles from './style.css';
-import cssModules from 'react-css-modules';
 
-class Progress extends Component {
+export default class Progress extends Component {
   constructor(props) {
     super(props);
   }
@@ -23,11 +22,9 @@ class Progress extends Component {
       progressStyle.backgroundSize = `100vw ${this.props.height}px`;
     }
 
-    return <div styleName='progress' style={progressStyle}></div>;
+    return <div className={styles.progress} style={progressStyle}></div>;
   }
 }
-
-export default cssModules(Progress, styles);
 
 Progress.defaultProps = {
   height: 2,
